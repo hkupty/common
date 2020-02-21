@@ -1,13 +1,12 @@
 # vim: filetype=sh
 
 # Prompt symbol
-COMMON_PROMPT_SYMBOL="❯"
+COMMON_PROMPT_SYMBOL="→"
 
 # Colors
 COMMON_COLORS_HOST_ME=green
-COMMON_COLORS_HOST_AWS_VAULT=yellow
 COMMON_COLORS_CURRENT_DIR=blue
-COMMON_COLORS_RETURN_STATUS_TRUE=yellow
+COMMON_COLORS_RETURN_STATUS_TRUE=purple
 COMMON_COLORS_RETURN_STATUS_FALSE=red
 COMMON_COLORS_GIT_STATUS_DEFAULT=green
 COMMON_COLORS_GIT_STATUS_STAGED=red
@@ -34,9 +33,6 @@ common_host() {
   fi
   if [[ -n $me ]]; then
     echo "%{$fg[$COMMON_COLORS_HOST_ME]%}$me%{$reset_color%}:"
-  fi
-  if [[ $AWS_VAULT ]]; then
-    echo "%{$fg[$COMMON_COLORS_HOST_AWS_VAULT]%}$AWS_VAULT%{$reset_color%} "
   fi
 }
 
